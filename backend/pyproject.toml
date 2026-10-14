@@ -1,0 +1,26 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "sura-man-dev", email = "rohobotsolomon54@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "aiostream>=0.8.1",
+    "beanie>=2.2.0",
+    "fastapi[all]>=0.141.1",
+    "motor[srv]>=3.7.1",
+]
+
+[project.scripts]
+backend = "backend:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
+
+
+[tool.pytest.ini_options]
+pythonpath = "src"
